@@ -31,7 +31,26 @@ namespace ConsoleApp2
                 _inch = value;
             }
         }
+        public Distance() // default constructor
+        {
+            Console.WriteLine("Default Constructor Called");
+            _feet = 1;
+            _inch = 1;
+        }
+        public Distance(int feet,int inch)
+        {
+            Console.WriteLine("Parameterized Constructor Called");
+            this._feet = feet; // this is representative of current object inside the class.
+            _inch = inch;
+        }
+        public Distance(Distance distance)
+        {
+            Console.WriteLine("Copy Constructor Called");
+            _feet =distance._feet;
+            _inch = distance._inch;  
+        }
     }
+   
 }
 //MSIL CODE
 // Assembly  - Pyhsical file of MSIL Code (.exe, .dll)
@@ -53,5 +72,41 @@ Abstraction - Represent the complixty in very simple manner
 Inheritance - Acquire the members of existing class into new class
 
 Polymorphism - multiple forms
- 
+
+
+1.  It is a special function which has same name as of the class name. It is automatically called during object
+    creation of a class.
+
+Primary Job - It Allocates memory for an object of a class
+
+Features - 
+
+2. It always be public
+3. It does not return not even void
+4. It always execute once for an object of a class
+5. It is used to initialize an object of a class - set default values to class's properties
+6. Its primary job is to allocate memory for an object of a class.
+
+7. It has 3 types
+   7.1 default constructor - does not accept arguments 
+        Syntax - 
+         public classname()
+                {
+                }
+   7.2 parameterized constructor - accept arguments 
+        syntax:
+            public classname(dt var,dt var,....)
+                {
+                    ....
+                }
+   7.3 copy constructor  - accept argument of itself class as reference
+            public classname(classname refname)
+                {
+                        ...
+                }
+if more than one constructor defined inside a class then it is called constructor overloading.
+
+Data Binding: Connection of a function call with its body.
+
+
 */
