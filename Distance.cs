@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,6 +50,16 @@ namespace ConsoleApp2
             _feet =distance._feet;
             _inch = distance._inch;  
         }
+        // Return an object from function
+        // Add two distances
+        public Distance Add(Distance d) // d take ref of argument which we pass from main
+        {
+            Distance newdis=new Distance();
+            newdis._feet = _feet + d._feet;
+            newdis._inch = _inch + d._inch;
+            return newdis;  
+        } 
+
     }
    
 }
