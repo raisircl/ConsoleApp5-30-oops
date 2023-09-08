@@ -33,10 +33,42 @@ namespace ConsoleApp2
 		{
 			return _length * _breadth;
 		}
+		public Box() {
+			_length = 0;
+			_breadth = 0;	
+			_height = 0;	
+		}
+		public Box(int l,int b,int h)
+		{
+			_length = l;
+			_breadth = b;
+			_height = h;
+		}
+		public Box(Box box)
+		{
+			_length = box.Length;
+			_breadth = box.Breadth;
+			_height = box.Height;	
+		}
 		public int vol()
 		{
 			return _length * _breadth * _height;
 		}
-
-	}
+		public static bool operator==(Box b1,Box b2)
+		{
+				return b1.vol() == b2.vol();		
+		}
+        public static bool operator !=(Box b1, Box b2)
+        {
+            return b1.vol() != b2.vol();
+        }
+        public static bool operator >(Box b1, Box b2)
+        {
+            return b1.vol() > b2.vol();
+        }
+        public static bool operator <(Box b1, Box b2)
+        {
+            return b1.vol() < b2.vol();
+        }
+    }
 }

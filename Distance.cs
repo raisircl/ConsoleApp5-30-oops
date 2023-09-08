@@ -52,11 +52,11 @@ namespace ConsoleApp2
         }
         // Return an object from function
         // Add two distances
-        public Distance Add(Distance d) // d take ref of argument which we pass from main
+        public static Distance operator+(Distance d1,Distance d2) // d take ref of argument which we pass from main
         {
             Distance newdis=new Distance();
-            newdis._feet = _feet + d._feet;
-            newdis._inch = _inch + d._inch;
+            newdis._feet = d1._feet + d2._feet;
+            newdis._inch = d1._inch + d2._inch;
             return newdis;  
         } 
 

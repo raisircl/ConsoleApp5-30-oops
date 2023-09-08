@@ -4,10 +4,10 @@
 //{
 //    static void Main()
 //    {
-//        Distance d1=new Distance(); // default constructor called automatic
-//        Distance d2 = new Distance(5,2);
-//        Distance d3 = new Distance(2,2);
-//        Distance d4=new Distance();
+//        Distance d1 = new Distance(); // default constructor called automatic
+//        Distance d2 = new Distance(5, 2);
+//        Distance d3 = new Distance(2, 2);
+//        Distance d4 = new Distance();
 //        d1.Feet = 10; // set
 //        d1.Inch = 5; // set
 
@@ -15,13 +15,13 @@
 
 //        Console.WriteLine($"Distance of d4 is {d4.Feet} Feet {d4.Inch} Inch.");
 
-//        int? x=null;
+//        int? x = null;
 
 //        x = x ?? 10;
-        
+
 //        //x=x.HasValue ? x: 10;    
 
-//        if(x.HasValue)
+//        if (x.HasValue)
 //        {
 //            Console.WriteLine($"value of X={x}");
 //        }
